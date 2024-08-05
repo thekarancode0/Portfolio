@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="description" content="Karan's portfolio showcasing skills and projects.">
+    <meta name="keywords" content="Karan, portfolio, web developer, programmer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <ul>
+                <li><a class="navlist" href="#image-container">Home</a></li>
+                <li><a class="navlist" href="#profile">Profile</a></li>
+                <li><a class="navlist" href="#project">Projects</a></li>
+                <li><a class="navlist" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="image-container" id="image-container">
+            <div class="two-part">
+                <div class="title">
+                    <h1>Hi, I am <span class="name">Karan</span></h1>
+                    <h1>and I am a Passionate</h1>
+                    <span id="element"></span>
+                </div>
+            
+                <div class="image"></div>
+            </div>
+        </section>
+        <hr>
+        <section class="profile" id="profile">
+            <h1 class="text">My Profile</h1>
+            <div class="two-part">
+                <div class="profilepic">
+                    <img src="profile.png" alt="">
+                </div>
+                <div class="skill">
+                    <fieldset>
+                        <legend>Skills</legend>
+                        <span>HTML <div class="progress" style="--i:10;"></div></span>
+                        <span>CSS <div class="progress" style="--i:7;"></div></span>
+                        <span>JS <div class="progress" style="--i:3;"></div></span>
+                        <span>C++ <div class="progress" style="--i:9;"></div></span>
+                        <span>C <div class="progress" style="--i:9;"></div></span>
+                        <span>VB.NET <div class="progress" style="--i:7;"></div></span>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+         <hr>
+        <section class="project" id="project">
+            <h1 class="text">My Projects</h1>
+            <div class="two-part">
+                <div class="projectlist">
+                    <div class="project1">
+                        <div class="project1.1">
+                            <a href="https://thekarancode0.github.io/TicTacToeWeb/" target="_blank">
+                                <img src="project1.jpeg">
+                            </a>
+                        </div>
+                        <div class="project1.2">
+                            <a href="https://thekarancode0.github.io/Heartfall/" target="_blank">
+                                <img src="project2.jpeg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project2">
+                        <div class="project2.1">
+                            <a href="https://thekarancode0.github.io/Role-Play-Game/">
+                                <img src="project3.jpeg" alt="">
+                            </a>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div class="profilepic"> <img src="project.png" alt=""></div>
+            </div>
+        </section>
+        <hr>
+        <section class="contact" id="contact">
+            <h1 class="text">Contact me</h1>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/karan-kumar-8164832b3/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/thekarancode0" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/main_karan_/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@main_karan" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        document.querySelectorAll('.navlist').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Programmer.', 'Data Structure.', 'YouTuber.'],
+            typeSpeed: 70, // Increase typing speed
+            backSpeed: 30, // Speed for erasing text
+            backDelay: 1000, // Delay before starting to erase
+            startDelay: 500, // Initial delay
+            loop: true, // Loop the animation
+            showCursor: false, // Show blinking cursor
+        });
+    </script>
+</body>
+</html>

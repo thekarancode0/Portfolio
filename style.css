@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: #0a0a23;
+    scroll-behavior: smooth;
+}
+
+hr{
+    margin: 50px;
+    padding: 0 30px;
+    border: none;
+    height: 3px;
+ 
+    background-color: #252557;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.text{
+    font-size: 2.5em;
+    text-align: center;
+    color: #252557;
+    letter-spacing: 7px;
+    margin-bottom: 40px;
+}
+
+.two-part{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+}
+
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(3, 16, 61);
+    position: fixed;
+    top: 0px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    display: block;
+    list-style: none;
+}
+
+.navlist {
+    text-decoration: none;
+    margin-right: 70px;
+    color: white;
+    transition: .1s all linear;
+}
+
+.navlist:hover {
+    color: blueviolet;
+}
+
+
+
+.profile, .project,.contact,.image-container {
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding-top: 50px;
+    
+}
+
+
+
+#element {
+    display: inline;
+    font-size: 1.5em;
+    border-right: 2px solid blueviolet;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#element,.name{
+    color:rgb(143, 80, 201)
+}
+.image {
+    width: 350px;
+    height: 350px;
+    background-image: url("mypic.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid rgb(3, 16, 61);
+    border-bottom: 10px solid rgba(5, 46, 80, 0.671);
+    border-radius: 50%;
+    
+}
+
+.img-title {
+    margin-top: 20px;
+    letter-spacing: 8px;
+    font-size: 2.5em;
+}
+
+.img-subtitle {
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.247);
+}
+
+.title {
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color:white
+
+}
+
+.profilepic img{
+    width: 400px;
+    height: 400px;
+}
+.skill {
+    max-width: 500px;
+    width: 80%;
+    margin: 30px auto;
+    color: white;
+}
+
+.skill legend {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.skill span {
+    display: block;
+    padding-left: 20px;
+    text-align: start;
+    margin: 15px;
+}
+
+.profile .progress {
+    width: calc(var(--i) * 10%);
+    height: 5px;
+    background-color: rgb(0, 153, 255);
+}
+
+.icons{
+    margin-top: 20px;
+    border-top: 2px solid white;
+}
+.icons a{
+    color: white;
+    margin: 10px 10px;
+    font-size: 2em;
+}
+
+.icons a:hover{
+   color:rgb(199, 197, 197)
+    
+}
+
+.projectlist{
+    width: 50%;
+    height: 450px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+.projectlist > div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+/* .projectlist > div >div{
+    padding: 10px;
+    height: 100%;
+    width: 50%;
+} */
+
+.projectlist > div > div > a >img{
+    margin: 10px ;
+    width: 90%;
+    border: 1px solid white;
+    object-fit: fill;
+
+}
+
+.projectlist > div > div > a >img:hover{
+    border: 2px solid #0a0a23;
+}
+.projectlist .project2{
+    width: 100%;
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width:412px){
+    *{
+        margin: 0;
+        padding: 0;
+        margin-right: 10px;
+    }
+   
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .two-part{
+        display: flex;
+        flex-direction: column;
+    }
+    #navbar{
+        display: block;
+        padding: 30px
+    }
+    .navlist{
+        display: flex;
+        font-size: 1em;
+        margin-right: 20px;
+    }
+   .text{
+    text-align: center;
+    font-size: 1.4em;
+   }
+
+    .image-container > img{
+        width: 300px;
+        height: 300px;
+    }
+   .title{
+    font-size: 1em;
+    text-align: center;
+   }
+
+   .skill{
+    max-width: 300px;
+    width: 70%;
+    color: white;
+   }
+
+   hr{
+    border: 2px solid #232337;
+   }
+
+   .projectlist{
+    height: 600px;
+    width: 90%;
+   }
+   .projectlist :first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    margin-bottom: 0;
+   }
+   .projectlist:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: c;
+    margin-bottom: 30px;
+   }
+   .projectlist > div > div > a >img{
+    margin: 10px ;
+    width:200px;
+    border: 1px solid white;
+    object-fit: fill;
+
+}
+}
